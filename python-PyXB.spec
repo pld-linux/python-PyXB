@@ -3,7 +3,7 @@ Summary:	Python XML Schema Bindings
 Name:		python-%{module}
 Version:	1.1.1
 Release:	0.1
-License:	Apache v. 2.0
+License:	Apache v2.0
 Group:		Development/Languages/Python
 Source0:	http://downloads.sourceforge.net/project/pyxb/pyxb/1.1.1%20%28Beta%29/PyXB-base-%{version}.tar.gz
 # Source0-md5:	90e38bf24693478f664c8fdf78d92f05
@@ -41,7 +41,6 @@ Some examples for PyXB package.
 
 %prep
 %setup -q -n %{module}-%{version}
-
 %patch0 -p1
 
 %build
@@ -58,7 +57,7 @@ rm -rf $RPM_BUILD_ROOT
 %py_postclean
 
 install -d $RPM_BUILD_ROOT%{_examplesdir}
-cp -a examples $RPM_BUILD_ROOT%{_examplesdir}/%{name}
+cp -a examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -84,4 +83,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files examples
 %defattr(644,root,root,755)
-%{_examplesdir}/%{name}
+%{_examplesdir}/%{name}-%{version}
