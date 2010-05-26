@@ -1,0 +1,24 @@
+--- PyXB-1.1.1/scripts/pyxbdump.orig	2010-05-26 14:58:16.000000000 +0200
++++ PyXB-1.1.1/scripts/pyxbdump	2010-05-26 14:58:28.000000000 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/python
+ 
+ import pyxb.namespace
+ import sys
+--- PyXB-1.1.1/scripts/pyxbgen.orig	2010-05-26 14:58:16.000000000 +0200
++++ PyXB-1.1.1/scripts/pyxbgen	2010-05-26 14:58:36.000000000 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/python
+ 
+ import pyxb.xmlschema
+ import pyxb.binding.generate
+--- PyXB-1.1.1/scripts/pyxbwsdl.orig	2010-05-26 14:58:16.000000000 +0200
++++ PyXB-1.1.1/scripts/pyxbwsdl	2010-05-26 14:58:49.000000000 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/python
+ 
+ # Sample URIs:
+ # http://www.weather.gov/forecasts/xml/DWMLgen/wsdl/ndfdXML.wsdl

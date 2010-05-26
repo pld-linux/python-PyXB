@@ -7,6 +7,7 @@ License:	Apache v. 2.0
 Group:		Development/Languages/Python
 Source0:	http://downloads.sourceforge.net/project/pyxb/pyxb/1.1.1%20%28Beta%29/PyXB-base-%{version}.tar.gz
 # Source0-md5:	90e38bf24693478f664c8fdf78d92f05
+Patch0:		shebang.patch
 URL:		http://pyxb.sourceforge.net
 BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
@@ -40,6 +41,8 @@ Some examples for PyXB package.
 
 %prep
 %setup -q -n %{module}-%{version}
+
+%patch0 -p1
 
 %build
 %{__python} setup.py build
