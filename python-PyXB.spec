@@ -30,6 +30,14 @@ Requires:	%{name} = %{version}-%{release}
 Tools that generate Python source code for classes that correspond to
 data structures defined in XMLSchema.
 
+%package examples
+Summary:	Python XML Schema Bindings examples
+Group:		Documentation
+Requires:	PyXB = %{version}-%{release}
+
+%description examples
+Some examples for PyXB package.
+
 %prep
 %setup -q -n %{module}-%{version}
 
@@ -45,6 +53,9 @@ rm -rf $RPM_BUILD_ROOT
 %py_ocomp $RPM_BUILD_ROOT%{py_sitescriptdir}
 %py_comp $RPM_BUILD_ROOT%{py_sitescriptdir}
 %py_postclean
+
+install -d $RPM_BUILD_ROOT%{_examplesdir}
+cp -a examples $RPM_BUILD_ROOT%{_examplesdir}/%{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -67,3 +78,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/pyxbdump
 %attr(755,root,root) %{_bindir}/pyxbgen
 %attr(755,root,root) %{_bindir}/pyxbwsdl
+
+%files examples
+%defattr(644,root,root,755)
+%{_examplesdir}/%{name}
