@@ -2,7 +2,7 @@
 Summary:	Python XML Schema Bindings
 Name:		python-%{module}
 Version:	1.1.1
-Release:	0.1
+Release:	1
 License:	Apache v2.0
 Group:		Development/Languages/Python
 Source0:	http://downloads.sourceforge.net/project/pyxb/pyxb/1.1.1%20%28Beta%29/PyXB-base-%{version}.tar.gz
