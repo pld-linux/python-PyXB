@@ -2,7 +2,7 @@
 Summary:	Python XML Schema Bindings
 Name:		python-%{module}
 Version:	1.1.1
-Release:	1
+Release:	2
 License:	Apache v2.0
 Group:		Development/Languages/Python
 Source0:	http://downloads.sourceforge.net/project/pyxb/pyxb/1.1.1%20%28Beta%29/PyXB-base-%{version}.tar.gz
@@ -67,11 +67,17 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc NOTICE README.txt doc/*
+%dir %{py_sitescriptdir}/pyxb
 %{py_sitescriptdir}/pyxb/*.py[co]
+%dir %{py_sitescriptdir}/pyxb/binding
 %{py_sitescriptdir}/pyxb/binding/*.py[co]
+%dir %{py_sitescriptdir}/pyxb/bundles
 %{py_sitescriptdir}/pyxb/bundles/*.py[co]
+%dir %{py_sitescriptdir}/pyxb/namespace
 %{py_sitescriptdir}/pyxb/namespace/*.py[co]
+%dir %{py_sitescriptdir}/pyxb/utils
 %{py_sitescriptdir}/pyxb/utils/*.py[co]
+%dir %{py_sitescriptdir}/pyxb/xmlschema
 %{py_sitescriptdir}/pyxb/xmlschema/*.py[co]
 %if "%{py_ver}" > "2.4"
 %{py_sitescriptdir}/%{module}-*.egg-info
